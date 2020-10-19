@@ -35,12 +35,16 @@ const webpackConfig = {
 const APP_ENTRY = project.paths.client('main.js')
 
 webpackConfig.entry = {
-  babelPolyfill: 'babel-polyfill',
-  fetchPolyfill: 'whatwg-fetch',
-  vendor: project.compiler_vendors,
-  app: __DEV__
-      ? [APP_ENTRY, `webpack-hot-middleware/client?path=${project.compiler_public_path}__webpack_hmr`]
-      : [APP_ENTRY]
+  app: { import: project.paths.client('main.js'), dependOn: 'shared' },
+  ...(__DEV__ ? { localDevHmr: { import: `webpack-hot-middleware/client?path=${project.compiler_public_path}__webpack_hmr`, dependOn: 'shared' } } : {}),
+  shared: ['react','react-dom','redux','react-redux','react-router','react-router-dom'],
+
+  // babelPolyfill: 'babel-polyfill',
+  // fetchPolyfill: 'whatwg-fetch',
+  // vendor: project.compiler_vendors,
+  // app: __DEV__
+  //     ? [APP_ENTRY, `webpack-hot-middleware/client?path=${project.compiler_public_path}__webpack_hmr`]
+  //     : [APP_ENTRY]
 }
 
 // ------------------------------------
