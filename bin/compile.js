@@ -21,11 +21,11 @@ const webpackCompiler = (webpackConfig) =>
 
       if (jsonStats.errors.length > 0) {
         debug('Webpack compiler encountered errors.')
-        debug(jsonStats.errors.join('\n'))
+        debug(jsonStats.errors.map(i => JSON.stringify(i)).join('\n'))
         return reject(new Error('Webpack compiler encountered errors'))
       } else if (jsonStats.warnings.length > 0) {
         debug('Webpack compiler encountered warnings.')
-        debug(jsonStats.warnings.join('\n'))
+        debug(jsonStats.warnings.map(i => JSON.stringify(i)).join('\n'))
       } else {
         debug('No errors or warnings encountered.')
       }
