@@ -8,12 +8,14 @@ lerna-debug.log*
 
 # Yarn Zero Installs
 .yarn/*
+.yarn/.cache/*
+.yarn/unplugged/*
+.yarn/build-state.yml
 !.yarn/cache
 !.yarn/releases
 !.yarn/plugins
 !.yarn/sdks
 !.yarn/versions
-.yarn/.cache/*
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
