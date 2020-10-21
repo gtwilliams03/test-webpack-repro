@@ -7,7 +7,7 @@ import 'bootstrap/scss/bootstrap.scss'
 import 'bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css'
 import s from './CoreLayout.scss'
 
-import { ListGroup } from 'react-bootstrap'
+import { Container, ListGroup } from 'react-bootstrap'
 
 class CoreLayout extends React.Component {
 
