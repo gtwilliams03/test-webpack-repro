@@ -216,5 +216,5 @@ webpackConfig.module.rules.push(
 if (!__DEV__) {
   //webpackConfig.plugins.push()
 }
-console.dir(webpackConfig, { depth: 10 })
+
 module.exports = webpackConfig
