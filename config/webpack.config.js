@@ -20,7 +20,6 @@ const webpackConfig = {
   resolve: {
     modules: [
       project.paths.client(),
-      'node_modules'
     ],
     extensions: ['.js', '.jsx', '.json']
   },
@@ -104,21 +103,14 @@ if (__DEV__) {
 webpackConfig.module.rules = []
 
 // JavaScript
-const includeTheseModules = [
-  '@restart/context',
-  // '@restart/hooks',
-  // 'sort-keys',
-]
 webpackConfig.module.rules.push({
   test: /\.(js|jsx)$/,
-  exclude: new RegExp(`/node_modules\/(?!(${includeTheseModules.join('|')})\/).*/`),
   include: [
-    ...includeTheseModules.map(i => project.paths.node_modules(i)),
     project.paths.client(),
   ],
   use: [
     {
-      loader: 'babel-loader',
+      loader: require.resolve('babel-loader'),
       options: project.compiler_babel,
     }
   ]
@@ -153,10 +145,10 @@ if (isUsingCSSModules) {
     test: /\.scss$/,
     include: cssModulesRegex,
     use: [
-      { loader: 'style-loader', options: { } },
-      { loader: 'css-loader', options: { sourceMap: true, modules: { localIdentName: '[name]__[local]___[hash:base64:5]' }, importLoaders: 1 } },
-      { loader: 'postcss-loader', options: { sourceMap: true } },
-      { loader: 'sass-loader', options: { sourceMap: true, sassOptions: { includePaths: [project.paths.client('styles')] } } }
+      { loader: require.resolve('style-loader'), options: { } },
+      { loader: require.resolve('css-loader'), options: { sourceMap: true, modules: { localIdentName: '[name]__[local]___[hash:base64:5]' }, importLoaders: 1 } },
+      { loader: require.resolve('postcss-loader'), options: { sourceMap: true } },
+      { loader: require.resolve('sass-loader'), options: { sourceMap: true, sassOptions: { includePaths: [project.paths.client('styles')] } } }
     ]
   })
 
@@ -164,9 +156,9 @@ if (isUsingCSSModules) {
     test: /\.css$/,
     include: cssModulesRegex,
     use: [
-      { loader: 'style-loader', options: { } },
-      { loader: 'css-loader', options: { sourceMap: true, modules: { localIdentName: '[name]__[local]___[hash:base64:5]' }, importLoaders: 1 } },
-      { loader: 'postcss-loader', options: { sourceMap: true } },
+      { loader: require.resolve('style-loader'), options: { } },
+      { loader: require.resolve('css-loader'), options: { sourceMap: true, modules: { localIdentName: '[name]__[local]___[hash:base64:5]' }, importLoaders: 1 } },
+      { loader: require.resolve('postcss-loader'), options: { sourceMap: true } },
     ]
   })
 }
@@ -177,19 +169,19 @@ webpackConfig.module.rules.push({
   test: /\.scss$/,
   exclude: excludeCSSModules,
   use: [
-    { loader: 'style-loader', options: { } },
-    { loader: 'css-loader', options: { } },
-    { loader: 'postcss-loader', options: { sourceMap: true } },
-    { loader: 'sass-loader', options: { sourceMap: true, sassOptions: { includePaths: [project.paths.client('styles')] } } }
+    { loader: require.resolve('style-loader'), options: { } },
+    { loader: require.resolve('css-loader'), options: { } },
+    { loader: require.resolve('postcss-loader'), options: { sourceMap: true } },
+    { loader: require.resolve('sass-loader'), options: { sourceMap: true, sassOptions: { includePaths: [project.paths.client('styles')] } } }
   ]
 })
 webpackConfig.module.rules.push({
   test: /\.css$/,
   exclude: excludeCSSModules,
   use: [
-    { loader: 'style-loader', options: { } },
-    { loader: 'css-loader', options: { } },
-    { loader: 'postcss-loader', options: { sourceMap: true } },
+    { loader: require.resolve('style-loader'), options: { } },
+    { loader: require.resolve('css-loader'), options: { } },
+    { loader: require.resolve('postcss-loader'), options: { sourceMap: true } },
   ]
 })
 

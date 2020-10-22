@@ -21,7 +21,6 @@ const config = {
   dir_public : 'public',
   dir_server : 'server',
   dir_test   : 'tests',
-  dir_node_modules : 'node_modules',
 
   // ----------------------------------
   // Server Configuration
@@ -128,7 +127,6 @@ config.paths = {
   client : base.bind(null, config.dir_client),
   public : base.bind(null, config.dir_public),
   dist   : base.bind(null, config.dir_dist),
-  node_modules: base.bind(null, config.dir_node_modules)
 }
 
 // ========================================================
