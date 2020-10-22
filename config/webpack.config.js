@@ -20,7 +20,6 @@ const webpackConfig = {
   resolve: {
     modules: [
       project.paths.client(),
-      'node_modules'
     ],
     extensions: ['.js', '.jsx', '.json']
   },
