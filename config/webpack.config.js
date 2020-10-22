@@ -20,6 +20,7 @@ const webpackConfig = {
   resolve: {
     modules: [
       project.paths.client(),
+      'node_modules'
     ],
     extensions: ['.js', '.jsx', '.json']
   },
@@ -188,8 +189,8 @@ webpackConfig.module.rules.push({
 // File loaders
 /* eslint-disable */
 webpackConfig.module.rules.push(
-  { test: /\.(woff|woff2|ttf|eot|svg)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/, use: [{ loader: 'url-loader', options: { limit: 100000 } }] },
-  { test: /\.(gif|png|jpg)$/, use: [ { loader: 'url-loader', options: { limit: 8192 } }] }
+  { test: /\.(woff|woff2|ttf|eot|svg)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/, use: [{ loader: require.resolve('url-loader'), options: { limit: 100000 } }] },
+  { test: /\.(gif|png|jpg)$/, use: [ { loader: require.resolve('url-loader'), options: { limit: 8192 } }] }
 )
 /* eslint-enable */
 
@@ -208,5 +209,5 @@ webpackConfig.module.rules.push(
 if (!__DEV__) {
   //webpackConfig.plugins.push()
 }
-
+console.log(webpackConfig)
 module.exports = webpackConfig
