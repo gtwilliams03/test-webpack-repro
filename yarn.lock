@@ -10700,9 +10700,9 @@ resolve@^1.18.1:
   languageName: node
   linkType: hard
 
-"sass-loader@npm:^10.0.3":
-  version: 10.0.3
-  resolution: "sass-loader@npm:10.0.3"
+"sass-loader@npm:^10.0.4":
+  version: 10.0.4
+  resolution: "sass-loader@npm:10.0.4"
   dependencies:
     klona: ^2.0.4
     loader-utils: ^2.0.0
@@ -10721,7 +10721,7 @@ resolve@^1.18.1:
       optional: true
     sass:
       optional: true
-  checksum: 1adeab16289aea26a0372e029c1b51b93c4ec528601ad0ee42354d4bc81b81a7dd2f30d6e4bf9539e0fb1f538e577bd81ec22f0426403031153cf91de56385f5
+  checksum: ec8e0b8a388750a37f044c3fc1ad89a3dd817d68687a5bfc8abd176aef2d3d63e105a9bbf4ed4a1a729bef95986aba72db6f3048dc939460f06c7437f26242a4
   languageName: node
   linkType: hard
 
@@ -11731,7 +11731,7 @@ resolve@^1.18.1:
     redux-thunk: ^2.3.0
     rimraf: ^3.0.2
     sass: ^1.27.0
-    sass-loader: ^10.0.3
+    sass-loader: ^10.0.4
     sinon: ^9.2.0
     sinon-chai: ^3.5.0
     style-loader: ^2.0.0

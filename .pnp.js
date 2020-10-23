@@ -138,7 +138,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["redux-thunk", "npm:2.3.0"],
             ["rimraf", "npm:3.0.2"],
             ["sass", "npm:1.27.0"],
-            ["sass-loader", "virtual:d0f46b1820a3b45017348397c04e18fb0c0d6ea9d2f75bb36b8677dce53ebd865aab9e19afe431603d45dada5bcf7e39ec372c9c470d186467f70ad56a16374f#npm:10.0.3"],
+            ["sass-loader", "virtual:d0f46b1820a3b45017348397c04e18fb0c0d6ea9d2f75bb36b8677dce53ebd865aab9e19afe431603d45dada5bcf7e39ec372c9c470d186467f70ad56a16374f#npm:10.0.4"],
             ["sinon", "npm:9.2.0"],
             ["sinon-chai", "virtual:d0f46b1820a3b45017348397c04e18fb0c0d6ea9d2f75bb36b8677dce53ebd865aab9e19afe431603d45dada5bcf7e39ec372c9c470d186467f70ad56a16374f#npm:3.5.0"],
             ["style-loader", "virtual:d0f46b1820a3b45017348397c04e18fb0c0d6ea9d2f75bb36b8677dce53ebd865aab9e19afe431603d45dada5bcf7e39ec372c9c470d186467f70ad56a16374f#npm:2.0.0"],
@@ -12672,10 +12672,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["sass-loader", [
-        ["virtual:d0f46b1820a3b45017348397c04e18fb0c0d6ea9d2f75bb36b8677dce53ebd865aab9e19afe431603d45dada5bcf7e39ec372c9c470d186467f70ad56a16374f#npm:10.0.3", {
-          "packageLocation": "./.yarn/$$virtual/sass-loader-virtual-a5986b530d/0/cache/sass-loader-npm-10.0.3-1e14223419-1adeab1628.zip/node_modules/sass-loader/",
+        ["virtual:d0f46b1820a3b45017348397c04e18fb0c0d6ea9d2f75bb36b8677dce53ebd865aab9e19afe431603d45dada5bcf7e39ec372c9c470d186467f70ad56a16374f#npm:10.0.4", {
+          "packageLocation": "./.yarn/$$virtual/sass-loader-virtual-fcd455a580/0/cache/sass-loader-npm-10.0.4-e2bd742c87-ec8e0b8a38.zip/node_modules/sass-loader/",
           "packageDependencies": [
-            ["sass-loader", "virtual:d0f46b1820a3b45017348397c04e18fb0c0d6ea9d2f75bb36b8677dce53ebd865aab9e19afe431603d45dada5bcf7e39ec372c9c470d186467f70ad56a16374f#npm:10.0.3"],
+            ["sass-loader", "virtual:d0f46b1820a3b45017348397c04e18fb0c0d6ea9d2f75bb36b8677dce53ebd865aab9e19afe431603d45dada5bcf7e39ec372c9c470d186467f70ad56a16374f#npm:10.0.4"],
             ["@types/fibers", null],
             ["@types/node-sass", null],
             ["@types/sass", null],
@@ -13782,7 +13782,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["redux-thunk", "npm:2.3.0"],
             ["rimraf", "npm:3.0.2"],
             ["sass", "npm:1.27.0"],
-            ["sass-loader", "virtual:d0f46b1820a3b45017348397c04e18fb0c0d6ea9d2f75bb36b8677dce53ebd865aab9e19afe431603d45dada5bcf7e39ec372c9c470d186467f70ad56a16374f#npm:10.0.3"],
+            ["sass-loader", "virtual:d0f46b1820a3b45017348397c04e18fb0c0d6ea9d2f75bb36b8677dce53ebd865aab9e19afe431603d45dada5bcf7e39ec372c9c470d186467f70ad56a16374f#npm:10.0.4"],
             ["sinon", "npm:9.2.0"],
             ["sinon-chai", "virtual:d0f46b1820a3b45017348397c04e18fb0c0d6ea9d2f75bb36b8677dce53ebd865aab9e19afe431603d45dada5bcf7e39ec372c9c470d186467f70ad56a16374f#npm:3.5.0"],
             ["style-loader", "virtual:d0f46b1820a3b45017348397c04e18fb0c0d6ea9d2f75bb36b8677dce53ebd865aab9e19afe431603d45dada5bcf7e39ec372c9c470d186467f70ad56a16374f#npm:2.0.0"],
